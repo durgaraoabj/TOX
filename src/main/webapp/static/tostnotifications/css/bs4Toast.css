@@ -1,0 +1,17 @@
+.bs4ToastWrapper{
+    position: fixed;
+    z-index: 1;
+    left:80%;
+    top: 11%;
+    width: 300px;
+    /* margin-top: */
+}
+
+.bs4Toasticonimage{
+    height: 15px;
+}
+
+.bs4Toasticon{
+    margin-right: 0.5rem;
+    
+}

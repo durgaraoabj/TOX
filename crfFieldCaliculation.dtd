@@ -1,0 +1,3 @@
+<!ELEMENT Employee (Emp_Id, Emp_Name+)>
+<!ELEMENT Emp_Id (#PCDATA)>
+<!ELEMENT Emp_Name (#PCDATA)>

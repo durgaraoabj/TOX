@@ -1,0 +1,53 @@
+/* 
+    Document   : RoundTable
+    Created on : Jun 26, 2013, 12:06:04 PM
+    Author     : jp
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+table.round {
+	background:#789EC5;
+	margin:10px;
+	border:#fff 1px solid;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px}
+	
+table.round th {padding:4px 5px}
+
+table.round td {
+    background:#eee ;
+	padding:2px 10px 4px 10px}
+	
+table.round tr.even td {background:#eee}
+
+table.round tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:10px;
+	-webkit-border-bottom-left-radius:10px;
+	border-bottom-left-radius:10px}
+	
+table.round tr:last-child td:last-child {
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-bottom-right-radius:10px;
+	border-bottom-right-radius:10px}
+
+table.round {border-collapse:collapse}
+
+#jp{
+    margin: 20px auto;
+    padding: 20px 20px;
+    border:#000 1px solid;        
+    background: #eee;
+    border-radius: 0 15px 0 15px;
+    -moz-border-radius: 0 15px 0 15px;
+    -webkit-border-radius: 0 15px 0 15px;
+}
+#jp table td {
+    fontSize :11px;
+    color: #c02537;
+}
+#jp table th {
+    fontSize :11px;
+    color: #c02537;
+}

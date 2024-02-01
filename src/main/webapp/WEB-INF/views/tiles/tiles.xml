@@ -1,0 +1,2142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layout/default_layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="mainMenu"
+			value="/WEB-INF/views/tiles/template/divisions/default_main_menu.jsp" />
+		<put-attribute name="mainMenuRigtSide"
+			value="/WEB-INF/views/tiles/template/divisions/default_main_menu_rigt_side.jsp" />
+					<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+<!-- 		<put-attribute name="menu" -->
+<!-- 			value="/WEB-INF/views/tiles/template/divisions/default_menu.jsp" /> -->
+		<put-attribute name="messagePath"
+			value="/WEB-INF/views/tiles/template/divisions/messagePath.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/template/divisions/defaultBody.jsp" />
+		<put-attribute name="commonPath"
+			value="/WEB-INF/views/tiles/template/default_common_path.jsp" />
+		<put-attribute name="footerPart"
+			value="/WEB-INF/views/tiles/template/divisions/default_footer_page.jsp" />
+		<put-attribute name="rightMenu"
+			value="/WEB-INF/views/tiles/template/default_right_menu.jsp" />
+	</definition>
+
+	<!-- login Definition -->
+	<definition name="login-definition"
+		template="/WEB-INF/views/tiles/layout/login_default_layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- login Page -->
+	<definition name="login" extends="login-definition">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/login.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/home.jsp" />
+	</definition>
+
+	<definition name="mainLayout_2"
+		template="/WEB-INF/views/tiles/layout/testing_layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="mainMenu"
+			value="/WEB-INF/views/tiles/template/divisions/default_main_menu.jsp" />
+		<put-attribute name="mainMenuRigtSide"
+			value="/WEB-INF/views/tiles/template/divisions/default_main_menu_rigt_side.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/tiles/template/divisions/default_menu.jsp" 
+			/> -->
+		<put-attribute name="messagePath"
+			value="/WEB-INF/views/tiles/template/divisions/messagePath.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/template/divisions/defaultBody.jsp" />
+		<put-attribute name="commonPath"
+			value="/WEB-INF/views/tiles/template/default_common_path.jsp" />
+		<put-attribute name="footerPart"
+			value="/WEB-INF/views/tiles/template/divisions/default_footer_page.jsp" />
+		<put-attribute name="rightMenu"
+			value="/WEB-INF/views/tiles/template/default_right_menu.jsp" />
+	</definition>
+
+	<!-- Access Denied -->
+	<definition name="accessDenied.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/access_denied.jsp" />
+	</definition>
+
+	<!-- Change Study -->
+	<definition name="userWiseActiveStudies.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="User | Studies" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/user_wise_active_study_list.jsp" />
+	</definition>
+	<!-- Change Site -->
+	<definition name="userWiseActiveSites.tiles"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="User | Studies | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/user_wise_active_site_list.jsp" />
+	</definition>
+
+	<!-- Dash Board tiles info start -->
+	<definition name="dashboard.tiles" extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/home.jsp" />
+	</definition>
+
+
+	<!-- Dash Board tiles info end -->
+
+	<!-- Administration tiles info start -->
+	<definition name="adminDashBoard.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/admin_home.jsp" />
+	</definition>
+
+	<definition name="studies.tiles" extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/sidemenu.jsp" 
+			/> -->
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studies.jsp" />
+	</definition>
+	<definition name="changeStudyStatus.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Administration" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/changeStudyState.jsp" />
+	</definition>
+	<definition name="subjectCrfProcessPending.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Administration" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/subjectCrfProcessPending.jsp" />
+	</definition>
+
+	<definition name="createStudy.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Create Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyCreationPage.jsp" />
+	</definition>
+	<definition name="studyMetaData" extends="base-definition">
+		<put-attribute name="title" value="Study MetaData" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/userStudiesList.jsp" />
+	</definition>
+
+	<definition name="studyUpdateList" extends="base-definition">
+		<put-attribute name="title" value="Study Update List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyUpdateList.jsp" />
+	</definition>
+
+	<definition name="studyUpdatePage" extends="base-definition">
+		<put-attribute name="title" value="Study Update" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyUpdatePage.jsp" />
+	</definition>
+	<definition name="studyMetaDataEntry"
+		extends="base-definition">
+		<put-attribute name="title" value="StudyMetaDaEntry" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyMetaDataPage.jsp" />
+	</definition>
+	<definition name="updatestudyDesign"
+		extends="base-definition">
+		<put-attribute name="title" value="StudyMetaDaEntry" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/updatestudyDesignPage.jsp" />
+	</definition>
+	<definition name="updatestudyMetaData"
+		extends="base-definition">
+		<put-attribute name="title" value="StudyMetaDaEntry" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyMetaDataUpdatePage.jsp" />
+	</definition>
+	<definition name="studyView.tiles" extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/studyView.jsp" />
+	</definition>
+
+	<definition name="allUsers.tiles" extends="base-definition">
+		<put-attribute name="title" value="Admin | All Users" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/all_users.jsp" />
+	</definition>
+
+	<definition name="createUser.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Admin | Create Users" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/create_user.jsp" />
+	</definition>
+	<definition name="updateUser.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Admin | Update Users" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/update_user.jsp" />
+	</definition>
+
+	<definition name="loginCredentials.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Login Credentials" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/login_credentials.jsp" />
+	</definition>
+
+	<definition name="asignStudy.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Asign Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/study/asign_study.jsp" />
+	</definition>
+
+
+
+
+	<definition name="changePassword.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Admin | All Users" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/change_password.jsp" />
+	</definition>
+	<!-- Administration tiles info end -->
+
+
+	<definition name="crfuploadpage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<!-- <put-attribute name="body" value="/WEB-INF/views/pages/administration/users/create_user.jsp" 
+			/> -->
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/crf/crfuploadpage.jsp" />
+	</definition>
+
+	<definition name="crfview.tiles" extends="base-definition">
+		<put-attribute name="title" value="CRF Preview" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/crf/crfview.jsp" />
+		<!-- <put-attribute name="body" value="/WEB-INF/views/pages/administration/study/asign_study.jsp" 
+			/> -->
+	</definition>
+
+	<definition name="studyDashBoard.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/study_home.jsp" />
+	</definition>
+
+
+	<!-- <definition name="buildStudy.tiles" extends="base-definition"> -->
+	<!-- <put-attribute name="title" value="dashboard | Home"/> -->
+	<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/sidemenu.jsp" 
+		/> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/views/pages/study/BuildStudy.jsp" 
+		/> -->
+	<!-- </definition> -->
+	<definition name="configureCrfs.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/configureCrfs.jsp" />
+	</definition>
+
+
+	<definition name="volunteerCreation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/volunteerCreation.jsp" />
+	</definition>
+	<definition name="volunteerCreationDone.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/volunteerCreationDone.jsp" />
+	</definition>
+	<definition name="buildStudyNotDose.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/buildStudyNotDose.jsp" />
+	</definition>
+	<definition name="periodManagement.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/periodManagement.jsp" />
+	</definition>
+	<definition name="periodManagementVollist.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/periodManagementVolList.jsp" />
+	</definition>
+
+	<definition name="subjectMatrix.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/subjectMatrix.jsp" />
+	</definition>
+	<definition name="viewSubjectPeriodCrfs.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/subjectCrfMatrix.jsp" />
+	</definition>
+	<definition name="stdCrfDataEntryView.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/crfDataEntryView.jsp" />
+	</definition>
+	<definition name="stdCrfDataEntryUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/period/crfDataEntryUpdate.jsp" />
+	</definition>
+
+
+	<definition name="crfupload.tiles" extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfUpload.jsp" />
+	</definition>
+
+	<definition name="warningPage" extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/warningPage.jsp" />
+	</definition>
+	<definition name="crfuploadTestView.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfuploadTestView.jsp" />
+	</definition>
+	<definition name="crfuploadTestViewError.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfuploadTestViewError.jsp" />
+	</definition>
+
+	<definition name="crfuploadView.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfuploadView.jsp" />
+	</definition>
+
+	<definition name="studyConfigureCrfs.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/studyConfigureCrfs.jsp" />
+	</definition>
+	<definition name="configureCrfsToPeriod.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/configureCrfsToPeriods.jsp" />
+	</definition>
+	<definition name="configureCrfsPeriod.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/configureCrfsPeriod.jsp" />
+	</definition>
+
+	<!-- crf rules -->
+	<definition name="crfRule.tiles" extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfRule.jsp" />
+	</definition>
+	<definition name="crfRuleCreationPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfRuleCreationPage.jsp" />
+	</definition>
+	<definition name="crfDateComparison.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfDateComparison.jsp" />
+	</definition>
+	<definition name="crfDateComparisonPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfDateComparisonPage.jsp" />
+	</definition>
+	<definition name="buildStudyNotDose.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/buildStudyNotDose.jsp" />
+	</definition>
+
+
+	<definition name="reviewerHome.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/reviewerHomePage.jsp" />
+	</definition>
+	<definition name="buildStudyNotDoseReiew.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/buildStudyNotDose.jsp" />
+	</definition>
+	<definition name="subjectMatrixReview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/subjectMatrix.jsp" />
+	</definition>
+	<definition name="viewSubjectPeriodCrfsReview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/subjectCrfMatrix.jsp" />
+	</definition>
+	<definition name="stdCrfDataEntryReview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/stdCrfDataEntryReview.jsp" />
+	</definition>
+
+	<definition name="extractData.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Dataset" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/dataset/dataset_sidemenu.jsp" 
+			/> -->
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dataset/dataset_home.jsp" />
+	</definition>
+	<definition name="datasetCreationPage2.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Dataset" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/dataset/dataset_sidemenu.jsp" 
+			/> -->
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dataset/datasetCreationPage.jsp" />
+	</definition>
+	<definition name="datasetCreationPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Dataset" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/dataset/dataset_sidemenu.jsp" 
+			/> -->
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dataset/datasetCreationPage.jsp" />
+	</definition>
+
+	<definition name="crfFieldCaliculation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/crfFieldCaliculation.jsp" />
+	</definition>
+	<!-- <definition name="crfuploadTestView.tiles" extends="base-definition"> -->
+	<!-- <put-attribute name="title" value="CRF"/> -->
+	<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/sidemenu.jsp" 
+		/> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/views/pages/crf/crfuploadTestView.jsp" 
+		/> -->
+	<!-- </definition> -->
+
+
+
+	<definition name="crfCreation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="E-From Design" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/crfFromDesign.jsp" />
+	</definition>
+
+
+	<definition name="studycrfFieldCaliculation.tiles"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Study E-From Caliculation" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/crfFieldCaliculation.jsp" />
+	</definition>
+	<definition name="studycrfRule.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study  E-From Rules" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/crfRule.jsp" />
+	</definition>
+	<definition name="studycrfRuleCreationPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study  E-From Rules" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/crfRuleCreationPage.jsp" />
+	</definition>
+	<definition name="studycrfDateComparison.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study  E-From Rules" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/crfDateComparison.jsp" />
+	</definition>
+	<definition name="studycrfDateComparisonPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study  E-From Rules" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/crfDateComparisonPage.jsp" />
+	</definition>
+
+
+	<definition name="stdClinicalHome.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/studyClinicalData.jsp" />
+	</definition>
+	<definition name="stdClinicalUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalUpdate.jsp" />
+	</definition>
+	<definition name="sampleSchedule.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/sampleSchedule.jsp" />
+	</definition>
+	<definition name="sampleScheduleUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/sampleScheduleUpdate.jsp" />
+	</definition>
+	<definition name="sampleTimePointsPreview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/sampleTimePointsPreview.jsp" />
+	</definition>
+	<definition name="vitalSchedule.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/vitalSchedule.jsp" />
+	</definition>
+	<definition name="vitalScheduleUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/vitalScheduleUpdate.jsp" />
+	</definition>
+	<definition name="vitalTimePontsPrivew.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/vitalTimePontsPrivew.jsp" />
+	</definition>
+
+	<definition name="stdSubjectBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical|Bar-codes" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdSubjectBarcodes.jsp" />
+	</definition>
+
+	<definition name="stdVacutainerBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical|Bar-codes" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdVacutainerBarcodes.jsp" />
+	</definition>
+	<definition name="stdVialBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical|Bar-codes" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdVialBarcodes.jsp" />
+	</definition>
+
+	<definition name="labTechnicianBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/labTechnicianBarcodes.jsp" />
+	</definition>
+	<definition name="stdSachetBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical | Sachect" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdSachetBarcodes.jsp" />
+	</definition>
+	<definition name="stdSachetBarcodesUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical | Sachect" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdSachetBarcodesUpdate.jsp" />
+	</definition>
+
+	<definition name="stdSachetBarcodes.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical | Sachect" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdSachetBarcodes.jsp" />
+	</definition>
+
+	<definition name="stdClinicalExecution.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalExecutionHome.jsp" />
+	</definition>
+	<definition name="stdClinicaldosing.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicaldosing.jsp" />
+	</definition>
+	<definition name="stdClinicalSampleCollection.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalSampleCollection.jsp" />
+	</definition>
+	<definition name="stdClinicalSampleSaperation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalSampleSaperation.jsp" />
+	</definition>
+	<definition name="stdClinicalVitalCollection.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalVitalCollection.jsp" />
+	</definition>
+
+	<definition name="stdClinicaldosingReport.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical | Report" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicaldosingReport.jsp" />
+	</definition>
+	<definition name="stdClinicalSampleCollectionReport.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical| Report" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalSampleCollectionReport.jsp" />
+	</definition>
+	<definition name="stdClinicalSampleSaperationReport.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical| Report" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalSampleSaperationReport.jsp" />
+	</definition>
+	<definition name="stdClinicalVitalCollectionReport.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Clinical| Report" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/clinical/clinicalSideMenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/clinical/stdClinicalVitalCollectionReport.jsp" />
+	</definition>
+
+
+	<definition name="groupClassList.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/groupClassList.jsp" />
+	</definition>
+	<definition name="createGroupClass.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/createGroupClass.jsp" />
+	</definition>
+
+	<definition name="groupList.tiles" extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/groupList.jsp" />
+	</definition>
+	<definition name="createGroup.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/createGroup.jsp" />
+	</definition>
+
+
+	<definition name="siteList.tiles" extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/siteList.jsp" />
+	</definition>
+	<definition name="createSite.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study | Site" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/createSite.jsp" />
+	</definition>
+	<definition name="subjectMatrixForSite.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/subjectMatrix.jsp" />
+	</definition>
+	<definition name="createSubject.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/createSubject.jsp" />
+	</definition>
+	<definition name="scheduleSubject.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/site/scheduleSubject.jsp" />
+	</definition>
+
+	<definition name="subjectMatrixForSiteReview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Execution" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<!-- <put-attribute name="body" value="/WEB-INF/views/pages/site/subjectMatrix.jsp" 
+			/> -->
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/period/subjectMatrix.jsp" />
+	</definition>
+
+	<definition name="asignSite.tiles" extends="base-definition">
+		<put-attribute name="title" value="Asign Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/study/asign_sites.jsp" />
+	</definition>
+	<definition name="dashboardReport.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/dashboard/dashboard_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/dashboardReport.jsp" />
+	</definition>
+	<definition name="globalStudyView.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/dashboard/dashboard_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/globalStudyView.jsp" />
+	</definition>
+	<definition name="globalStudyViewSubjectPeriodCrfs.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/subjectCrfMatrix.jsp" />
+	</definition>
+	<definition name="globalStudyCrfDataEntryReview.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dashboard/stdCrfDataEntryReview.jsp" />
+	</definition>
+	<definition name="studyAuditLog.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/dashboard/dashboard_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/auditlong/studyAuditLog.jsp" />
+	</definition>
+	<definition name="subAuditLogs.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/dashboard/dashboard_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/auditlong/subAuditLog.jsp" />
+	</definition>
+
+	<definition name="changePassword.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Global Study View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/dashboard/dashboard_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/changePassword.jsp" />
+	</definition>
+
+	<definition name="randomization.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Randomization" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/randomization_home.jsp" />
+	</definition>
+
+	<definition name="randomizationUpdate.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Randomization" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/randomizationUpdate.jsp" />
+	</definition>
+
+	<!-- ipRequest -->
+	<definition name="ipRequest.tiles" extends="base-definition">
+		<put-attribute name="title" value="IWRS" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/randomization/iwrs_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/ipRequest.jsp" />
+	</definition>
+	<definition name="newIpRequest.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="IWRS" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/randomization/iwrs_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/newIpRequest.jsp" />
+	</definition>
+	<definition name="ipResponse.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="IWRS" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/randomization/iwrs_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/ipResponse.jsp" />
+	</definition>
+	<definition name="allocation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="IWRS" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/randomization/iwrs_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/allocation.jsp" />
+	</definition>
+
+	<definition name="iwrs.tiles" extends="base-definition">
+		<put-attribute name="title" value="IWRS" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/randomization/iwrs_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/randomization/iwrs.jsp" />
+	</definition>
+	<!--ForPdfReports -->
+	<definition name="pdfReportsSelectionPage.tiles"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="PDF Reports Selection" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reports/pdfReportsSelection.jsp" />
+	</definition>
+
+	<definition name="expermentalDesign"
+		extends="base-definition">
+		<put-attribute name="title" value="Experimental Design" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/expermentalDesign.jsp" />
+	</definition>
+	<definition name="initialExpermentalDesing"
+		extends="base-definition">
+		<put-attribute name="title" value="Experimental Design" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/initialexpermentalDesignPage.jsp" />
+	</definition>
+	<definition name="expermentalDesignView"
+		extends="base-definition">
+		<put-attribute name="title" value="Experimental Design" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/expermentalDesignView.jsp" />
+	</definition>
+	<definition name="expermentalDesignViewForUpdate"
+		extends="base-definition">
+		<put-attribute name="title" value="Experimental Design" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/expermentalDesignUpdate.jsp" />
+	</definition>
+	<definition name="observationConfig"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Configuration" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/observationConfig.jsp" />
+	</definition>
+	<definition name="observationConfig2"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Configuration" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/observationConfig2.jsp" />
+	</definition>
+
+
+	<definition name="createExpermentalDesignEFrom"
+		extends="base-definition">
+		<put-attribute name="title" value="Build Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/createExpermentalDesignEFrom.jsp" />
+	</definition>
+	<definition name="studyExecution" extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/studyExecution.jsp" />
+	</definition>
+	<definition name="subgroupSubjects"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/subgroupSubjects.jsp" />
+	</definition>
+	<definition name="animalCrfDataEntry"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/animalCrfDataEntry.jsp" />
+	</definition>
+	<definition name="animalCrfDataView"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/animalCrfDataView.jsp" />
+	</definition>
+	<definition name="subGroupObservations"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Sub Group Observations" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/subgroupObservations.jsp" />
+	</definition>
+	<definition name="dataLocation.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/physicalBalance/dataLocation.jsp" />
+	</definition>
+	<definition name="physicalWeightBalanceDataView.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/physicalBalance/physicalWeightBalanceDataView.jsp" />
+	</definition>
+
+
+	<definition name="reviewObjservations"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/reviewObjservations.jsp" />
+	</definition>
+	<definition name="subgroupSubjectsReview"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/subgroupSubjectsReview.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewView"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/animalCrfDataReviewView.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewOnly"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/animalCrfDataReviewViewOnly.jsp" />
+	</definition>
+
+	<definition name="discrepancy.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Discrepancy" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/discrepency/discrepency_home.jsp" />
+	</definition>
+	<definition name="observationApprovelLevel.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/observationApprovelLevel.jsp" />
+	</definition>
+	<definition name="satroiusData.tiles"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/satroius/satroiusData.jsp" />
+	</definition>
+	<definition name="viewExpermantalInfo"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/viewExpermantalInfo.jsp" />
+	</definition>
+	<definition name="viewExpermantalInCalender"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/viewExpermantalInCalender.jsp" />
+	</definition>
+
+
+	<definition name="templateViewPage" extends="mainLayout_2">
+		<put-attribute name="title" value="Template Preview" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/templateFiles/templatePreviewPage.jsp" />
+	</definition>
+	<definition name="templateFileDetails"
+		extends="base-definition">
+		<put-attribute name="title" value="Template Preview" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/templateFiles/templateFileDetailsPage.jsp" />
+	</definition>
+	<definition name="mapTableToCrf" extends="base-definition">
+		<put-attribute name="title" value="CRF" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crf/mapTableToCrf.jsp" />
+	</definition>
+
+	<definition name="obserVasionDesignScheduleDetails"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obvSchedule/observationSchedulePage.jsp" />
+	</definition>
+
+	<definition name="dayWiseobserVasionDesignScheduleDetails"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obvSchedule/daywiseObservationSchedulePage.jsp" />
+	</definition>
+	<definition name="studyView.tiles" extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyaudit/studyview.jsp" />
+	</definition>
+	<definition name="crfAuditData.tiles"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyaudit/crfAuditData.jsp" />
+	</definition>
+	<definition name="searchPage" extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyaudit/searchForStudy.jsp" />
+	</definition>
+	<definition name="studySearchData" extends="base-definition">
+		<put-attribute name="title"
+			value="Observation Design Schedule" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyaudit/studySearchListData.jsp" />
+	</definition>
+	<definition name="coagulometerData"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/coagulometerPage.jsp" />
+	</definition>
+	<definition name="sartoriusData" extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/sartoriusPage.jsp" />
+	</definition>
+
+	<definition name="reviewHomePage" extends="base-definition">
+		<put-attribute name="title" value="Review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/review/reviewHomePage.jsp" />
+	</definition>
+
+	<definition name="designReviewPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Design Review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/review/designreviewPage.jsp" />
+	</definition>
+
+	<definition name="dataEntryMessage"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Study DataEntry Message" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyDesign/DataEntryInformation.jsp" />
+	</definition>
+	<definition name="studyDesignMessagePage"
+		extends="base-definition">
+		<put-attribute name="title" value="Study Design Message" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views//pages/studyDesign/studyDesignMessage.jsp" />
+	</definition>
+	<definition name="amendmentPage" extends="base-definition">
+		<put-attribute name="title" value="Amendment Details" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/amendment/amendmentDetailsPage.jsp" />
+	</definition>
+	<definition name="crfauditObjservations"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/crfauditObjservations.jsp" />
+	</definition>
+	<definition name="crfauditSubgroupSubjectsReview"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/crfAuditAnimalCrfDataReviewView.jsp" />
+	</definition>
+	<definition name="crfAuditAnimalCrfDataReviewViewOnly"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/cefAuditAnimalCrfDataReviewViewOnly.jsp" />
+	</definition>
+	<definition name="subgroupSubjectsAllReviews"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/subgroupSubjectsAllReviews.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewAllAnimal"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/animalCrfDataReviewViewAllAnimal.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewOnlyAllAnimal"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/animalCrfDataReviewViewOnlyAllAnimal.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewAllAnimal"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyReview/animalCrfDataReviewViewAllAnimal.jsp" />
+	</definition>
+	<definition name="subgroupSubjectsAuditAllReviews"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/subgroupSubjectsAuditAllReviews.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewAllAnimalAudit"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/animalCrfDataReviewViewAllAnimalAudit.jsp" />
+	</definition>
+	<definition name="animalCrfDataReviewViewOnlyAllAnimalAudit"
+		extends="base-definition">
+		<put-attribute name="title" value="Study" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/crfaudit/animalCrfDataReviewViewOnlyAllAnimalAudit.jsp" />
+	</definition>
+
+	<definition name="multiFormCalculationPage"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Multi From Calculations" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/multiFormCalc/multiFormCalculationPage.jsp" />
+	</definition>
+	<definition name="sysmaxData" extends="base-definition">
+		<put-attribute name="title"
+			value="Multi From Calculations" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/sysmaxPage.jsp" />
+	</definition>
+	<definition name="rolesWisePage" extends="base-definition">
+		<put-attribute name="title" value="Roles Menu" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/rolesMenu/roleMenuPage.jsp" />
+	</definition>
+
+	<definition name="viewAllModuleLinksRole"
+		extends="base-definition">
+		<put-attribute name="title" value="Roles Menu" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/rolesMenu/allModulesList.jsp" />
+	</definition>
+
+
+	<definition name="roleCreation" extends="base-definition">
+		<put-attribute name="title" value="Role Cretion Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/users/roleCreationPage.jsp" />
+	</definition>
+
+	<definition name="studyPlanUpload" extends="base-definition">
+		<put-attribute name="title" value="Study Plan Upload" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyPlan/studyPlanUploadPage.jsp" />
+	</definition>
+	<definition name="acclimatizationPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Acclimatization" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclimatizationPage.jsp" />
+	</definition>
+
+	<definition name="animalAccessionPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Animal Accession" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/animalAccessionPage.jsp" />
+	</definition>
+
+	<definition name="animalsAccessionView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Accession View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/animalAccessionViewPage.jsp" />
+	</definition>
+
+	<definition name="viewDataEntryForms"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclimatizationDataEntryFormsPage.jsp" />
+	</definition>
+
+	<definition name="accessionAnimalDataEntryView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/accessionAimalsDataEntryView.jsp" />
+	</definition>
+
+	<definition name="viewAccessionAnimalsData"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclamatizationAnimalDataView.jsp" />
+	</definition>
+	<definition name="reviewDataEntryForms"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/reviewDataEntryForms.jsp" />
+	</definition>
+	<definition name="accessionAnimalDataEntryReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/accessionAnimalDataReviewForm.jsp" />
+	</definition>
+	<definition name="observationAnimalDataEntryReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obsercation/observationAnimalDataReviewForm.jsp" />
+	</definition>
+	<definition name="observationAnimalDataEntryView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obsercation/observationAnimalDataEntryView.jsp" />
+	</definition>
+
+	<definition name="animalRandomizationStatusList"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationFormStatusList.jsp" />
+	</definition>
+	<definition name="animalRandomization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationPage.jsp" />
+	</definition>
+
+	<definition name="generateGropRandomization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/generateGropRandomizationPage.jsp" />
+	</definition>
+
+	<definition name="cageDesign" extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/cageing.jsp" />
+	</definition>
+	<definition name="viewAccessionAnimalsDataForRandamization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/viewAccessionAnimalsDataForRandamization.jsp" />
+	</definition>
+
+	<definition name="animalRandomizationReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/reviewer/reviewer_sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationReview.jsp" />
+	</definition>
+
+
+	<definition name="selectInstrument"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/selectInstrument.jsp" />
+	</definition>
+	<definition name="readInsturmentDataCapture"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/readInsturmentDataCapture.jsp" />
+	</definition>
+	<definition name="sysmexDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/sysmex/sysmexDataExport.jsp" />
+	</definition>
+	<definition name="stagoDataExport" extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/sysmex/stagoDataExport.jsp" />
+	</definition>
+	<definition name="vitrosDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/vistros/vitrosDataExport.jsp" />
+	</definition>
+
+	<definition name="insturmenConfiguration"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/coagulometerPage.jsp" />
+	</definition>
+
+	<definition name="animalGroup" extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalGroup.jsp" />
+	</definition>
+	<definition name="testCodeUnits" extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/atestCodeUnits.jsp" />
+	</definition>
+	<definition name="testCodes" extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/testCodes.jsp" />
+	</definition>
+	<definition name="createStudyAndGrouping"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/sidemenu.jsp" 
+			/> -->
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/createStudyAndGrouping.jsp" />
+	</definition>
+	<definition name="addIntrumentAndPerameters"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/addIntrumentAndPerameters.jsp" />
+	</definition>
+	<definition name="studyAndGroupingView"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/studyView.jsp" />
+	</definition>
+
+	<definition name="testCodesProfiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/testCodesProfiles.jsp" />
+	</definition>
+
+	<definition name="insturmentDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/insturmentDataExport.jsp" />
+	</definition>
+	<definition name="createSponsorMasterPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Sponsor" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/createSponsorMasterPage.jsp" />
+	</definition>
+
+
+
+	<definition name="studyPlanUpload" extends="base-definition">
+		<put-attribute name="title" value="Study Plan Upload" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/studyPlan/studyPlanUploadPage.jsp" />
+	</definition>
+	<definition name="acclimatizationPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Acclimatization" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclimatizationPage.jsp" />
+	</definition>
+
+	<definition name="animalAccessionPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Animal Accession" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/animalAccessionPage.jsp" />
+	</definition>
+
+	<definition name="animalsAccessionView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Accession View" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/animalAccessionViewPage.jsp" />
+	</definition>
+
+	<definition name="viewDataEntryForms"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclimatizationDataEntryFormsPage.jsp" />
+	</definition>
+
+	<definition name="accessionAnimalDataEntryView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/accessionAimalsDataEntryView.jsp" />
+	</definition>
+
+	<definition name="viewAccessionAnimalsData"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/acclamatizationAnimalDataView.jsp" />
+	</definition>
+	<definition name="reviewDataEntryForms"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/reviewDataEntryForms.jsp" />
+	</definition>
+	<definition name="reviewDataEntryFormsCalender"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/reviewDataEntryFormsCalender.jsp" />
+	</definition>
+	<definition name="accessionAnimalDataEntryReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/accessionAnimalDataReviewForm.jsp" />
+	</definition>
+	<definition name="observationAnimalDataEntryReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obsercation/observationAnimalDataReviewForm.jsp" />
+	</definition>
+	<definition name="observationAnimalDataEntryView"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Animal Data Entry Review Page" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/obsercation/observationAnimalDataEntryView.jsp" />
+	</definition>
+
+	<definition name="animalRandomizationStatusList"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationFormStatusList.jsp" />
+	</definition>
+	<definition name="animalRandomization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationPage.jsp" />
+	</definition>
+
+	<definition name="generateGropRandomization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/generateGropRandomizationPage.jsp" />
+	</definition>
+
+	<definition name="cageDesign" extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/cageing.jsp" />
+	</definition>
+	<definition name="viewAccessionAnimalsDataForRandamization"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Accession Data Entry Forms" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/acclimatization/viewAccessionAnimalsDataForRandamization.jsp" />
+	</definition>
+
+	<definition name="animalRandomizationReview"
+		extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationReview.jsp" />
+	</definition>
+
+
+	<definition name="selectInstrument"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/selectInstrument.jsp" />
+	</definition>
+	<definition name="readInsturmentDataCapture"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/readInsturmentDataCapture.jsp" />
+	</definition>
+	<definition name="sysmexDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/sysmex/sysmexDataExport.jsp" />
+	</definition>
+	<definition name="stagoDataExport" extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/sysmex/stagoDataExport.jsp" />
+	</definition>
+	<definition name="vitrosDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/vistros/vitrosDataExport.jsp" />
+	</definition>
+
+	<definition name="insturmenConfiguration"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/coagulometerPage.jsp" />
+	</definition>
+
+	<definition name="animalGroup" extends="base-definition">
+		<put-attribute name="title"
+			value="Animal Radomization Forms Issues List" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalGroup.jsp" />
+	</definition>
+	<definition name="testCodeUnits" extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/testCodeUnits.jsp" />
+	</definition>
+	<definition name="testCodes" extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/testCodes.jsp" />
+	</definition>
+	<definition name="createStudyAndGrouping"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/pages/sidemenu.jsp" 
+			/> -->
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/createStudyAndGrouping.jsp" />
+	</definition>
+	<definition name="addIntrumentAndPerameters"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/addIntrumentAndPerameters.jsp" />
+	</definition>
+	<definition name="studyAndGroupingView"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/studyView.jsp" />
+	</definition>
+
+	<definition name="clinpahtPeramsView"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/clinpahtPeramsView.jsp" />
+	</definition>
+
+	<definition name="testCodesProfiles"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/grouping/testCodesProfiles.jsp" />
+	</definition>
+
+	<definition name="insturmentDataExport"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/insturmentDataExport.jsp" />
+	</definition>
+	<definition name="studyDirectorDashBoard"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/study/studyDirectorDashBoard.jsp" />
+	</definition>
+
+	<definition name="animalRandomizationViewPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationViewPage.jsp" />
+	</definition>
+	<definition name="animalRandomizationViewReviewPage"
+		extends="base-definition">
+		<put-attribute name="title" value="Coagulometer Data" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/animalRandomization/animalRandomizationViewReviewPage.jsp" />
+	</definition>
+
+	<definition name="readInsturmentDataCapturePage"
+		extends="base-definition">
+		<put-attribute name="title" value="dashboard | Home" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/instrument/readInsturmentDataCapturePage.jsp" />
+	</definition>
+
+	<definition name="studyReviewPage" extends="base-definition">
+		<put-attribute name="title" value="Study Review" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/pages/sidemenu.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/reviewer/studyReviewPage.jsp" />
+	</definition>
+	
+	
+	<definition name="clinicalCodes" extends="base-definition">
+		<put-attribute name="title" value="Clnical Codes" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/administration/clinicalCodes.jsp" />
+	</definition>
+	<definition name="dataExport" extends="base-definition">
+		<put-attribute name="title" value="Clnical Codes" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/dataExport/dataExport.jsp" />
+	</definition>
+	
+</tiles-definitions>

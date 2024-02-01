@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EformCaliculation>
+	<EleCaliculation>
+		<resultField>e1</resultField>
+		<rule>sum(e2,e3,e4)</rule>
+	</EleCaliculation>
+	<EleCaliculation>
+		<resultField>e1</resultField>
+		<rule>avg(e2,e3,e4)</rule>
+	</EleCaliculation>
+</EformCaliculation>

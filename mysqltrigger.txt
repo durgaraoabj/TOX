@@ -1,0 +1,10 @@
+DROP TRIGGER vitros_data_from_exe_Trigger; 
+delimiter #
+create trigger vitros_data_from_exe_Trigger after insert on tox.vitros_data_from_exe
+for each row
+   begin
+   insert into tox.vitros_data(patientId, machineName,Result,testDate,TestName, onlineData, finalize) 
+		values (new.patientId, new.machineName, new.Result, new.testDate, new.TestName, false, true);
+   end#
+   
+	
